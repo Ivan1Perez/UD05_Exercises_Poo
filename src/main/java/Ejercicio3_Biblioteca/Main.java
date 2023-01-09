@@ -8,14 +8,13 @@ public class Main {
         Biblioteca biblioteca = new Biblioteca();
         System.out.print(biblioteca);
 
+        System.out.print("Recuperar libro: ");
         System.out.println(biblioteca.recuperarLibro("El alquimista"));
-
-        for(int i = 0 ; i < 100 ; i++) {
-            System.out.println("Añadir libro");
-            System.out.println(biblioteca.addLibro("Prueba addLibro", "Caca de vaca", 5));
-        }
+        System.out.println();
 
         System.out.println(biblioteca);
+
+        System.out.println(biblioteca.eliminarLibro("El"));
 
     }
 

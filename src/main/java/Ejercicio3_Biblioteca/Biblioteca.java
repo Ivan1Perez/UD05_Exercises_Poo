@@ -36,11 +36,38 @@ public class Biblioteca {
     }
 
     public boolean addLibro(String titulo, String autor, int ejemplares){
+        System.out.println("Añadiendo libro:");
+
         if(posicionArray < libros.length) {
             this.libros[posicionArray++] = new Libro(titulo, autor, ejemplares);
             return true;
         }
-        else return false;
+        else
+            return false;
+    }
+
+    public boolean eliminarLibro(String busqueda){
+        int i = 0;
+        int k = 0;
+        boolean existeLibro = false;
+        Libro[] aux = new Libro[0];
+
+        do {
+            if (libros[i].getTitulo().contains(busqueda)) {
+                aux = new Libro[libros.length - 1];
+                existeLibro = true;
+            }
+//            i++;
+        }while(!libros[i++].getTitulo().contains(busqueda));
+
+        if(existeLibro){
+            for(int j = 0; j < aux.length ; j++){
+                if(j!=(i-1))
+                    aux[j] = libros[k++];
+            }
+            libros = aux;
+        }
+        return existeLibro;
     }
 
     @Override
