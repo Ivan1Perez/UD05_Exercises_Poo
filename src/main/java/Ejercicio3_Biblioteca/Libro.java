@@ -6,7 +6,7 @@ public class Libro {
     private String autor;
     private int ejemplares;
     private int ejemplaresDisponibles;
-    private static int ejemplaresPrestados;
+    private int ejemplaresPrestados;
 
     public Libro(String titulo, String autor, int ejemplares) {
         this.titulo = titulo;
