@@ -5,7 +5,7 @@ public class Biblioteca {
     private Libro[] libros = new Libro[100];
 //    private final int capacidadBiblio = 100;
     private Libro libro;
-    private int posicionArray = 0;
+    private int posicionArray;
     private String nombre;
     private String localizacion;
     private int ejemplares = 3;
@@ -24,6 +24,12 @@ public class Biblioteca {
         this.libros[++posicionArray] = new Libro("El amor en los tiempos del cólera","Gabriel García Márquez", ejemplares);
     }
 
+
+    /**
+     * Método para encontrar la posición del array en la que se encuentra el libro
+     * @param titulo Título del libro
+     * @return Devuelve la posición del array de libros.
+     */
     public int recuperarLibro(String titulo) {
         int posicionArray = -1;
 
@@ -39,6 +45,7 @@ public class Biblioteca {
         else System.out.println("Libro '" + titulo + "' encontrado.");
         return posicionArray;
     }
+
 
     public boolean addLibro(String titulo, String autor, int ejemplares){
         System.out.println("Añadiendo libro: '" + titulo + "'.");

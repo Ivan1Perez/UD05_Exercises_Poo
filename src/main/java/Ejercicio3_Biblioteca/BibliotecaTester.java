@@ -1,5 +1,10 @@
 package Ejercicio3_Biblioteca;
 
+/**
+ * Esta clase es el ejecutable del proyecto. Aquí imprimimos por pantalla los resultados de los métodos seleccionados.
+ * @author Iván Pérez-Salamero Hernández
+ * @version 1.0
+ */
 public class BibliotecaTester {
 
     public static void main(String[] args) {
@@ -46,12 +51,14 @@ public class BibliotecaTester {
         System.out.println();
         System.out.println(biblioteca1.devolucion("En el ojo del Huracán"));
         System.out.println();
-        System.out.println(biblioteca1.devolucion("Crimen y castido"));
+        System.out.println(biblioteca1.devolucion("Crimen y castigo"));
         System.out.println();
         System.out.println(biblioteca1.devolucion("La ciudad y los perros"));
         System.out.println();
-        System.out.println(biblioteca1.devolucion("Crimen y castido"));
+        System.out.println(biblioteca1.devolucion("Crimen y castigo"));
         System.out.println();
+
+        System.out.println(biblioteca1);
 
     }
 
